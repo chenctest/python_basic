@@ -2,16 +2,18 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>AutoTestPlat</title>
+    <style>body{text-align:center}</style>
 </head>
 <body>
-<h1>login page</h1>
-<br method="post" action="/login/">
-    {% csrf_token%}
-<br> <input name="username" type="text" placeholder="username">
-<br> <input name="password" type="password" placeholder="password">
-    {{ error }} <br>
-<br> <button id="submit" type="submit">submit</button>
+<a href="/logout/">退出</a>
+<h1>自动化测试平台</h1>
+<form method="post" action="/login/">
+{% csrf_token%}
+<br><a>&nbsp;&nbsp;用户名：</a><input name="username" type="text" placeholder="username">
+<br><br><a>&nbsp;&nbsp;密&nbsp;&nbsp;码：&nbsp;</a><input name="password" type="password" placeholder="password">
+<br>{{ error }}<br>
+<button style="width:220px;height:28px" id="submit" type="submit">登录</button>
 </form>
 </body>
 </html>
